@@ -195,6 +195,10 @@ b {
   @apply font-zentry;
 }
 
+@utility header-font {
+  @apply font-VeniteAdoremus-regular;
+}
+
 @utility absolute-center {
   @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
 }
