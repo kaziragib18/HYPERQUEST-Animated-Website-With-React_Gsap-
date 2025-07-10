@@ -144,7 +144,7 @@ const Hero = () => {
             playsInline
           />
         </div>
-        <h1 className="header-font hero-heading absolute bottom-20 md:bottom-5 right-5 z-40 text-blue-75">
+        <h1 className="header-font hero-heading absolute bottom-20 md:bottom-5 right-10 z-40 text-blue-75">
           Reimagi<b>n</b>ed
         </h1>
         <div className="absolute left-0 top-0 z-40 size-full">
@@ -164,8 +164,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <h1 className="special-font hero-heading absolute bottom-20 md:bottom-5 right-5  text-black">
-        G<b>a</b>ming
+      <h1 className="font-VeniteAdoremus-regular hero-heading absolute bottom-20 md:bottom-5 right-10  text-black">
+        Reimagined
       </h1>
     </div>
   );
