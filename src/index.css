@@ -233,7 +233,7 @@ b {
 }
 
 @utility animated-title {
-  @apply flex flex-col gap-1 text-5xl uppercase leading-[.8] text-white sm:px-32 md:text-[5rem];
+  @apply flex flex-col gap-1 text-5xl uppercase leading-[.8] text-white sm:px-80 md:text-[5rem];
 }
 
 @utility nav-hover-btn {

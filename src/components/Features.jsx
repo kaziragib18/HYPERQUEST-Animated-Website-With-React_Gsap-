@@ -63,7 +63,7 @@ const Features = () => {
             <GameCard
               src="videos/card-2.mp4"
               title={<>Capitano</>}
-              description=" One of the highest-ranked Fatui Harbingers a powerful and enigmatic group serving under the Cryo Archon, the Tsaritsa of Snezhnaya"
+              description=" One of the highest-ranked Fatui Harbingers a powerful and enigmatic group serving under the Cryo Archon, the Tsaritsa of Snezhnaya."
             />
           </CardTilt>
           <CardTilt className="cards-tilt_1 border-hsla rounded-md row-span-1 col-span-2 md:col-span-1 md:row-span-1 w-full md:pr-4">

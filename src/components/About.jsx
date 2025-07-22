@@ -35,7 +35,7 @@ const About = () => {
           title="One World. One Journey. Endless Discovery"
           containerClass="mt-5 !text-black text-center "
         />
-        <div className="about-subtext">
+        <div className="about-subtext font-robertmedium">
           <p>When the World Becomes the Server, Every Choice Is a Quest</p>
           <p className="text-gray-500">
             Breaking the boundaries between games—one world where everyone plays
