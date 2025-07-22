@@ -12,6 +12,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
           trigger: containerRef.current,
           start: "100px bottom",
           end: "center bottom",
+          // This will pin the title in place while it animates
           toggleActions: "play none none reverse",
         },
       });
@@ -19,8 +20,8 @@ const AnimatedTitle = ({ title, containerClass }) => {
       titleAnimation.to(".animated-word", {
         opacity: 1,
         transform: "translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg)",
-        ease: "power2.inOut",
-        stagger: 0.02,
+        ease: "power1.inOut",
+        stagger: 0.05,
       });
     }, containerRef);
 
