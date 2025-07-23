@@ -54,7 +54,7 @@ const Features = () => {
         <CardTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
           <GameCard
             src="videos/card-9.mp4"
-            title={<>The witcher</>}
+            title={<>The Witcher</>}
             description="Geralt of Rivia, also known as the White Wolf, is a monster hunter for hire, known for his exceptional combat skills and deep sense of morality."
           />
         </CardTilt>
@@ -86,14 +86,12 @@ const Features = () => {
               className="grid grid-cols-1 grid-rows-4 gap-4 bg-black p-4 rounded-md
                   md:grid-cols-2 md:grid-rows-2"
             >
-              {/* a1: Text */}
               <div className="flex items-center justify-center rounded-md p-6">
                 <h1 className="card-title font-VeniteAdoremus-regular text-blue-50 text-center text-4xl md:text-5xl">
-                  M<b>o</b>re co<b>m</b>ing so<b>o</b>n!
+                  More coming soon!
                 </h1>
               </div>
 
-              {/* a2: Image 1 */}
               <div>
                 <img
                   src="/img/2.gif"
@@ -102,7 +100,6 @@ const Features = () => {
                 />
               </div>
 
-              {/* b1: Image 2 */}
               <div>
                 <img
                   src="/img/1.gif"
@@ -111,7 +108,6 @@ const Features = () => {
                 />
               </div>
 
-              {/* b2: Icon */}
               <div className="flex items-end justify-end p-3 text-blue-50">
                 <TiLocationArrow className="scale-[3]" />
               </div>

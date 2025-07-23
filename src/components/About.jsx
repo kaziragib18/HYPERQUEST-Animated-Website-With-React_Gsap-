@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   useGSAP(() => {
+    // Register the ScrollTrigger plugin for GSAP animations
     const clipAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: "#clip",
@@ -20,7 +21,7 @@ const About = () => {
         pinSpacing: true,
       },
     });
-
+    // Animate the clip path and border radius of the mask
     clipAnimation.to(".mask-clip-path", {
       width: "100vw",
       height: "100vh",
@@ -29,6 +30,8 @@ const About = () => {
   });
 
   return (
+    // This component renders the About section of the website
+    // It includes an animated title and a background video
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-10 md:mt-36 flex flex-col items-center gap-5">
         <AnimatedTitle

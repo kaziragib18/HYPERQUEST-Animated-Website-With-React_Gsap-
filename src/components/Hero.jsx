@@ -38,6 +38,7 @@ const Hero = () => {
   }, [loadedVideos]);
 
   useGSAP(
+    // This effect handles the transition between videos when the mini video is clicked
     () => {
       if (hasClicked) {
         gsap.set("#next-video", { visibility: "visible" });
@@ -50,6 +51,7 @@ const Hero = () => {
           ease: "power1.inOut",
           onStart: () => nextVideoRef.current.play(),
         });
+        // This will animate the current video to scale down and fade out
         gsap.from("#current-video", {
           transformOrigin: "center center",
           scale: 0,
@@ -58,6 +60,7 @@ const Hero = () => {
         });
       }
     },
+    // This effect runs when the component mounts and when hasClicked changes
     {
       dependencies: [CurrentIndex],
       revertOnUpdate: true,
@@ -65,10 +68,13 @@ const Hero = () => {
   );
 
   useGSAP(() => {
+    // Set the initial clip path and border radius for the video frame
     gsap.set("#video-frame", {
       clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
       borderRadius: "0% 0% 50% 15%",
     });
+    // Animate the video frame to reveal the video content
+    // This will create a smooth transition effect when the page loads
     gsap.from("#video-frame", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       borderRadius: "0% 0% 0% 0%",
@@ -83,6 +89,8 @@ const Hero = () => {
   });
 
   return (
+    // This conditionally renders a loading spinner if the videos are still loading
+    // It uses a three-body loading animation to indicate that the content is being prepared
     <div className="relative h-dvh w-screen overflow-x-hidden" id="home">
       {isLoading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
@@ -101,6 +109,8 @@ const Hero = () => {
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div
               onClick={handleMiniVdClick}
+              // This video is the current one playing
+              // It will be replaced by the next video when the user clicks on the mini video
               className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
             >
               <video

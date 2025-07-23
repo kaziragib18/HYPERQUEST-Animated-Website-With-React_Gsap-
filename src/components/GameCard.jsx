@@ -6,6 +6,8 @@ const GameCard = ({ src, title, description }) => {
   const isGif = src.toLowerCase().endsWith(".gif");
 
   return (
+    // This component renders a game card with a video or gif background
+    // It displays the title and description over the video or gif
     <div className="relative size-full">
       {isGif ? (
         <img
@@ -14,6 +16,7 @@ const GameCard = ({ src, title, description }) => {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
       ) : (
+        // If the src is not a gif, render a video
         <video
           src={src}
           loop

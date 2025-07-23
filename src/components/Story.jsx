@@ -6,6 +6,8 @@ import CreateEdge from "./CreateEdge";
 import Button from "./Button";
 
 const Story = () => {
+  // Reference to the image element for mouse movement effects
+  // It allows us to apply transformations based on mouse position
   const frameRef = useRef("null");
   const handleMouseLeave = () => {
     const element = frameRef.current;
@@ -17,17 +19,20 @@ const Story = () => {
       ease: "power1.inOut",
     });
   };
+  // Function to handle mouse movement and apply rotation effect
+  // It calculates the rotation based on mouse position relative to the element
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     const element = frameRef.current;
-
+    // If the element is not available, exit the function
     if (!e) return;
     const rect = element.getBoundingClientRect();
     const x = clientX - rect.left;
     const y = clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-
+    // Calculate rotation based on mouse position
+    // The rotation is applied to the element using GSAP for smooth animation
     const rotateX = ((y - centerY) / centerY) * -10;
     const rotateY = ((x - centerX) / centerX) * 10;
     gsap.to(element, {
