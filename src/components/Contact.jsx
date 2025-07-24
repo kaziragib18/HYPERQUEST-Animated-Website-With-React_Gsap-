@@ -39,7 +39,7 @@ const Contact = () => {
           </p>
 
           <AnimatedTitle
-            title="Journey through the realms of imagination."
+            title="Journey through the realms of imagination"
             className="special-font !md:text-[4.5rem] w-full !text-4xl !font-black !leading-[.9]"
           />
 

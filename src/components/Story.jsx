@@ -64,6 +64,8 @@ const Story = () => {
             <div className="story-img-mask">
               <div className="story-img-content">
                 <img
+                  // This image serves as the entrance to the story section
+                  // It has mouse movement effects applied to it for a dynamic visual experience
                   ref={frameRef}
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseLeave}

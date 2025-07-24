@@ -104,10 +104,11 @@ const Navbar = () => {
               <audio
                 ref={audioElementRef}
                 className="hidden"
-                src="/audio/loop_2.mp3"
+                src="/audio/loop_1.mp3"
                 loop
               />
               {isAudioPlaying ? (
+                // Render the audio indicator with animation
                 [1, 2, 3, 4].map((bar) => (
                   <div
                     key={bar}
@@ -118,6 +119,7 @@ const Navbar = () => {
                   />
                 ))
               ) : (
+                // Render the pause icon when audio is not playing
                 <TbMusicPause
                   color="white"
                   size={18}
